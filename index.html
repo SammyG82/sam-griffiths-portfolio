@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sam Griffiths — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@400;700;900&family=DM+Mono:wght@400;500&family=Cinzel:wght@400;600;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   :root { --gold: rgba(200,140,40,1); --gold-dim: rgba(200,140,40,0.35); --gold-faint: rgba(200,140,40,0.12); --cream: #f0d8a8; --bg: #0c0804; }
@@ -60,8 +61,8 @@
   .corner.bl { bottom: 24px; left: 24px; border-bottom: 1px solid rgba(200,140,40,0.6); border-left: 1px solid rgba(200,140,40,0.6); }
   .corner.br { bottom: 24px; right: 24px; border-bottom: 1px solid rgba(200,140,40,0.6); border-right: 1px solid rgba(200,140,40,0.6); }
 
-  .side-left { position: fixed; left: 28px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.2); text-transform: uppercase; white-space: nowrap; z-index: 11; opacity: 0; animation: fadeIn 2s ease forwards; animation-delay: 2.2s; }
-  .side-right { position: fixed; right: 28px; top: 50%; transform: translateY(-50%) rotate(90deg); font-family: 'Noto Serif JP', serif; font-size: 12px; color: rgba(200,140,40,0.12); white-space: nowrap; z-index: 11; letter-spacing: 0.1em; opacity: 0; animation: fadeIn 2s ease forwards; animation-delay: 2.4s; }
+  .side-left { position: absolute; left: 36px; top: 50%; transform: translateY(-50%) rotate(-90deg); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.2); text-transform: uppercase; white-space: nowrap; z-index: 11; opacity: 0; animation: fadeIn 2s ease forwards; animation-delay: 2.2s; }
+  .side-right { position: absolute; right: 28px; top: 50%; transform: translateY(-50%) rotate(90deg); font-family: 'Noto Serif JP', serif; font-size: 12px; color: rgba(200,140,40,0.12); white-space: nowrap; z-index: 11; letter-spacing: 0.1em; opacity: 0; animation: fadeIn 2s ease forwards; animation-delay: 2.4s; }
 
   /* NAV */
   .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid rgba(200,140,40,0.1); background: linear-gradient(180deg, rgba(8,5,2,0.85) 0%, transparent 100%); backdrop-filter: blur(4px); }
@@ -196,8 +197,6 @@
 <div class="blade-container"><div class="blade-glow"></div><div class="blade-line"></div></div>
 <div class="ripples"><div class="rip"></div><div class="rip"></div><div class="rip"></div></div>
 <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
-<div class="side-left">Full Stack Developer · Data Scientist · UCSD</div>
-<div class="side-right">鬼滅の開発者 · 無限の可能性</div>
 
 <nav class="top-nav">
   <div class="nav-logo"></div>
@@ -211,6 +210,8 @@
 
 <!-- HERO -->
 <section id="hero">
+  <div class="side-left">Full Stack Developer · Data Scientist · UCSD</div>
+  <div class="side-right">鬼滅の開発者 · 無限の可能性</div>
   <div class="ornament-top">
     <div class="orn-line"></div><div class="orn-diamond"></div>
     <div class="orn-text">Portfolio</div>
