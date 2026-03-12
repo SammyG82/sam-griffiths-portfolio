@@ -43,18 +43,18 @@
 .contact-form h3, .contact-socials h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600; color: #f0d8a8; letter-spacing: 0.1em; margin-bottom: 8px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-field { display: flex; flex-direction: column; gap: 8px; }
-.form-field label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.4); text-transform: uppercase; }
+.form-field label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.75); text-transform: uppercase; }
 .form-field input, .form-field textarea { background: rgba(200,140,40,0.03); border: 1px solid rgba(200,140,40,0.12); padding: 14px 16px; color: rgba(220,190,140,0.8); font-family: 'Cormorant Garamond', serif; font-size: 15px; outline: none; transition: all 0.3s; resize: none; }
 .form-field input:focus, .form-field textarea:focus { border-color: rgba(200,140,40,0.4); background: rgba(200,140,40,0.05); }
-.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(200,140,40,0.2); }
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(200,140,40,0.45); }
 .form-submit { margin-top: 8px; padding: 16px 32px; border: 1px solid rgba(200,140,40,0.35); background: rgba(200,140,40,0.06); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.7); text-transform: uppercase; cursor: pointer; transition: all 0.3s; align-self: flex-start; }
 .form-submit:hover { background: rgba(200,140,40,0.12); border-color: rgba(200,140,40,0.6); color: rgba(200,140,40,1); }
 .contact-socials { display: flex; flex-direction: column; gap: 14px; }
 .social-link { display: flex; align-items: center; gap: 16px; border: 1px solid rgba(200,140,40,0.1); padding: 18px 24px; text-decoration: none; transition: all 0.3s; background: rgba(200,140,40,0.02); }
 .social-link:hover { border-color: rgba(200,140,40,0.3); background: rgba(200,140,40,0.06); transform: translateX(4px); }
 .social-icon { font-size: 15px; width: 20px; text-align: center; color: rgba(200,140,40,0.5); }
-.social-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.35em; color: rgba(200,140,40,0.6); text-transform: uppercase; }
-.social-sub { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: rgba(220,190,140,0.3); margin-left: auto; }
+.social-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.35em; color: rgba(200,140,40,0.85); text-transform: uppercase; }
+.social-sub { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: rgba(220,190,140,0.7); margin-left: auto; }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {

@@ -44,7 +44,8 @@
      HERO
 ============================================= -->
 <section id="hero">
-  <div class="blade-container"><div class="blade-glow"></div><div class="blade-line"></div></div>
+
+
   <div class="side-left">Full Stack Developer · Data Scientist · UCSD</div>
   <div class="side-right">鬼滅の開発者 · 無限の可能性</div>
 
@@ -231,19 +232,19 @@
       <div class="contact-form reveal">
         <h3>Let's Connect</h3>
         <div class="form-row">
-          <div class="form-field"><label>First Name</label><input type="text" placeholder="First"></div>
-          <div class="form-field"><label>Last Name</label><input type="text" placeholder="Last"></div>
+          <div class="form-field"><label>First Name</label><input id="cf-first" type="text" placeholder="First"></div>
+          <div class="form-field"><label>Last Name</label><input id="cf-last" type="text" placeholder="Last"></div>
         </div>
-        <div class="form-field"><label>Email</label><input type="email" placeholder="your@email.com"></div>
-        <div class="form-field"><label>Message</label><textarea rows="5" placeholder="What's on your mind?"></textarea></div>
-        <button class="form-submit">Send Message →</button>
+        <div class="form-field"><label>Email</label><input id="cf-email" type="email" placeholder="your@email.com"></div>
+        <div class="form-field"><label>Message</label><textarea id="cf-message" rows="5" placeholder="What's on your mind?"></textarea></div>
+        <button class="form-submit" id="contact-submit">Send Message →</button>
       </div>
       <div class="contact-socials reveal">
         <h3>Socials</h3>
-        <a href="/cdn-cgi/l/email-protection#1a697d68737c7c736e72695a6f79697e347f7e6f" class="social-link">
+        <a href="mailto:sgriffiths@ucsd.edu" class="social-link">
           <span class="social-icon">✉</span>
           <span class="social-label">Email</span>
-          <span class="social-sub"><span class="__cf_email__" data-cfemail="deadb9acb7b8b8b7aab6ad9eabbdadbaf0bbbaab">[email&#160;protected]</span></span>
+          <span class="social-sub">sgriffiths@ucsd.edu</span>
         </a>
         <a href="https://github.com/SammyG82" target="_blank" class="social-link">
           <span class="social-icon">⌥</span>
@@ -255,10 +256,10 @@
           <span class="social-label">LinkedIn</span>
           <span class="social-sub">sam-b-griffiths</span>
         </a>
-        <a href="assets/resume.pdf" class="social-link">
+        <a href="https://drive.google.com/file/d/1zZn3F1_POlVNxyEZJiMzVzOy7O4lHa3B/view" target="_blank" class="social-link">
           <span class="social-icon">↓</span>
           <span class="social-label">Resume</span>
-          <span class="social-sub">Download PDF</span>
+          <span class="social-sub">View PDF</span>
         </a>
       </div>
     </div>
@@ -272,5 +273,20 @@
 </footer>
 
 <script src="scripts/main.js"></script>
+<script>
+document.getElementById('contact-submit').addEventListener('click', function () {
+  const first = document.getElementById('cf-first').value.trim();
+  const last = document.getElementById('cf-last').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const message = document.getElementById('cf-message').value.trim();
+  if (!first || !email || !message) {
+    alert('Please fill in your first name, email, and message.');
+    return;
+  }
+  const subject = encodeURIComponent('Portfolio Contact from ' + first + ' ' + last);
+  const body = encodeURIComponent('From: ' + first + ' ' + last + '\nEmail: ' + email + '\n\n' + message);
+  window.location.href = 'mailto:sgriffiths@ucsd.edu?subject=' + subject + '&body=' + body;
+});
+</script>
 </body>
 </html>

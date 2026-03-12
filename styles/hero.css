@@ -3,7 +3,8 @@
    Only needed on index.html
 ============================================= */
 
-#hero { position: relative; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 10; }
+#hero { position: relative; height: 100vh; padding-top: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 10; }
+
 
 /* Side text (anchored to hero, not fixed) */
 .side-left { display: none; }
@@ -14,19 +15,19 @@
 .orn-line { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,140,40,0.4)); }
 .orn-line.r { background: linear-gradient(90deg, rgba(200,140,40,0.4), transparent); }
 .orn-diamond { width: 6px; height: 6px; background: rgba(200,140,40,0.5); transform: rotate(45deg); }
-.orn-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.5em; color: rgba(200,140,40,0.45); text-transform: uppercase; }
+.orn-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.5em; padding-left: 0.5em; color: rgba(200,140,40,0.45); text-transform: uppercase; }
 
 /* Name */
 .main-name { opacity: 0; animation: fadeUp 1.4s ease forwards; animation-delay: 0.6s; position: relative; }
-.name-first { font-family: 'Cinzel', serif; font-size: clamp(18px, 2.5vw, 32px); font-weight: 400; color: rgba(220,190,140,0.6); letter-spacing: 0.6em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.name-first { font-family: 'Cinzel', serif; font-size: clamp(18px, 2.5vw, 32px); font-weight: 400; color: rgba(220,190,140,0.6); letter-spacing: 0.6em; padding-left: 0.6em; text-transform: uppercase; display: block; margin-bottom: 4px; }
 .name-last { font-family: 'Cinzel', serif; font-size: clamp(64px, 9vw, 130px); font-weight: 900; color: #f0d8a8; letter-spacing: 0.08em; text-transform: uppercase; display: block; line-height: 0.9; text-shadow: 0 0 60px rgba(200,100,20,0.3), 0 0 120px rgba(160,60,10,0.15); }
-.jp-sub { font-family: 'Noto Serif JP', serif; font-size: clamp(11px, 1.2vw, 15px); color: rgba(200,140,40,0.2); letter-spacing: 0.3em; display: block; margin-top: 12px; }
+.jp-sub { font-family: 'Noto Serif JP', serif; font-size: clamp(11px, 1.2vw, 15px); color: rgba(200,140,40,0.55); letter-spacing: 0.3em; display: block; margin-top: 12px; }
 
 /* Divider */
 .divider { display: flex; align-items: center; gap: 20px; margin: 36px 0; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 1s; }
 .div-line { width: 120px; height: 1px; background: linear-gradient(90deg, transparent, rgba(200,140,40,0.25)); }
 .div-line.r { background: linear-gradient(90deg, rgba(200,140,40,0.25), transparent); }
-.div-kanji { font-family: 'Noto Serif JP', serif; font-size: 18px; color: rgba(200,140,40,0.3); font-weight: 900; letter-spacing: 0.1em; }
+.div-kanji { font-family: 'Noto Serif JP', serif; font-size: 18px; color: rgba(200,140,40,0.6); font-weight: 900; letter-spacing: 0.1em; }
 
 /* Tagline */
 .tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(14px, 1.6vw, 20px); font-weight: 300; font-style: italic; color: rgba(220,190,140,0.45); letter-spacing: 0.15em; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 1.2s; }
@@ -34,7 +35,7 @@
 /* Location pill */
 .breathing-style { margin-top: 48px; display: flex; align-items: center; gap: 20px; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 1.5s; }
 .bs-line { width: 40px; height: 1px; background: rgba(200,140,40,0.2); }
-.bs-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.3); text-transform: uppercase; }
+.bs-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.65); text-transform: uppercase; }
 .bs-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(200,140,40,0.3); }
 
 
