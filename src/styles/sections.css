@@ -1,7 +1,24 @@
 /* =============================================
    SECTIONS.CSS — Projects, About, Skills, Contact
-   Used on index.html and any subpages
 ============================================= */
+
+/* ---- CAROUSEL ---- */
+.carousel { position: relative; display: flex; align-items: center; gap: 24px; }
+.carousel-arrow { background: none; border: 1px solid rgba(200,140,40,0.25); color: rgba(200,140,40,0.6); font-size: 18px; width: 44px; height: 44px; cursor: pointer; transition: all 0.3s; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.carousel-arrow:hover { border-color: rgba(200,140,40,0.6); color: rgba(200,140,40,1); background: rgba(200,140,40,0.06); }
+.carousel-card { flex: 1; border: 1px solid rgba(200,140,40,0.12); background: linear-gradient(135deg, rgba(200,140,40,0.03) 0%, transparent 60%); padding: 40px 48px; min-height: 280px; transition: opacity 0.25s ease, transform 0.25s ease; opacity: 1; transform: translateX(0); }
+.carousel-card--exit-right { opacity: 0; transform: translateX(-24px); }
+.carousel-card--exit-left { opacity: 0; transform: translateX(24px); }
+.carousel-counter { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.35); text-transform: uppercase; margin-bottom: 20px; }
+.carousel-title { font-family: 'Cinzel', serif; font-size: clamp(20px, 2.5vw, 32px); font-weight: 700; color: #f0d8a8; letter-spacing: 0.05em; margin-bottom: 8px; line-height: 1.2; }
+.carousel-company { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 300; font-style: italic; color: rgba(200,140,40,0.75); margin-bottom: 6px; }
+.carousel-period { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.35em; color: rgba(200,140,40,0.4); text-transform: uppercase; margin-bottom: 24px; }
+.carousel-bullets { list-style: none; padding: 0; border-top: 1px solid rgba(200,140,40,0.1); padding-top: 20px; }
+.carousel-bullets li { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; color: rgba(220,190,140,0.65); line-height: 1.7; margin-bottom: 8px; }
+.carousel-bullets li::before { content: '—'; color: rgba(200,140,40,0.4); margin-right: 8px; }
+.carousel-dots { position: absolute; bottom: -32px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+.carousel-dot { width: 6px; height: 6px; background: rgba(200,140,40,0.2); border: none; cursor: pointer; transform: rotate(45deg); transition: background 0.3s; padding: 0; }
+.carousel-dot--active { background: rgba(200,140,40,0.7); }
 
 /* ---- PROJECTS ---- */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
@@ -21,10 +38,6 @@
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .about-text p { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.4vw, 20px); font-weight: 300; color: rgba(220,190,140,0.65); line-height: 1.9; margin-bottom: 24px; }
 .about-text p span { color: rgba(200,140,40,0.8); font-style: italic; }
-.interest-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.35); text-transform: uppercase; margin-bottom: 16px; margin-top: 40px; }
-.interest-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-.interest-tag { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.25em; color: rgba(200,140,40,0.5); text-transform: uppercase; border: 1px solid rgba(200,140,40,0.15); padding: 6px 14px; transition: all 0.3s; }
-.interest-tag:hover { border-color: rgba(200,140,40,0.35); color: rgba(200,140,40,0.8); background: rgba(200,140,40,0.04); }
 .about-details { display: flex; flex-direction: column; gap: 28px; }
 .detail-block { border-left: 1px solid rgba(200,140,40,0.15); padding-left: 24px; }
 .detail-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.35); text-transform: uppercase; margin-bottom: 8px; }
@@ -57,7 +70,41 @@
 .social-sub { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: rgba(220,190,140,0.7); margin-left: auto; }
 
 /* ---- RESPONSIVE ---- */
+/* ---- TIMELINE ---- */
+.timeline { position: relative; padding: 8px 0; }
+.timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, transparent, rgba(200,140,40,0.35) 4%, rgba(200,140,40,0.35) 96%, transparent); transform: translateX(-50%); }
+.timeline-row { display: grid; grid-template-columns: 1fr 48px 1fr; margin-bottom: 40px; align-items: start; }
+.timeline-center { display: flex; justify-content: center; padding-top: 18px; position: relative; }
+.timeline-dot { width: 8px; height: 8px; background: rgba(200,140,40,0.65); transform: rotate(45deg); flex-shrink: 0; position: relative; z-index: 1; }
+.timeline-side { padding-top: 8px; }
+.timeline-side--left { padding-right: 28px; text-align: right; }
+.timeline-side--right { padding-left: 28px; }
+.timeline-card { border: 1px solid rgba(200,140,40,0.12); background: linear-gradient(135deg, rgba(200,140,40,0.03) 0%, transparent 60%); padding: 24px 28px; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.timeline-card:hover { border-color: rgba(200,140,40,0.3); background: linear-gradient(135deg, rgba(200,140,40,0.06) 0%, transparent 60%); }
+.timeline-side--left .timeline-card::after { content: ''; position: absolute; top: 26px; right: -28px; width: 28px; height: 1px; background: rgba(200,140,40,0.25); }
+.timeline-side--right .timeline-card::before { content: ''; position: absolute; top: 26px; left: -28px; width: 28px; height: 1px; background: rgba(200,140,40,0.25); }
+.timeline-title { font-family: 'Cinzel', serif; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700; color: #f0d8a8; letter-spacing: 0.05em; margin-bottom: 6px; line-height: 1.3; }
+.timeline-company { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; font-style: italic; color: rgba(200,140,40,0.75); margin-bottom: 4px; }
+.timeline-period { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.35em; color: rgba(200,140,40,0.4); text-transform: uppercase; margin-bottom: 0; }
+.timeline-dropdown { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.timeline-card--open .timeline-dropdown { max-height: 600px; }
+.timeline-bullets { margin-top: 16px; padding-left: 0; list-style: none; border-top: 1px solid rgba(200,140,40,0.1); padding-top: 16px; }
+.timeline-side--left .timeline-bullets { text-align: left; }
+.timeline-bullets li { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; color: rgba(220,190,140,0.65); line-height: 1.7; margin-bottom: 8px; }
+.timeline-bullets li::before { content: '—'; color: rgba(200,140,40,0.4); margin-right: 8px; }
+.timeline-toggle { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.35em; color: rgba(200,140,40,0.4); text-transform: uppercase; margin-top: 12px; }
+
+/* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .form-row { grid-template-columns: 1fr; }
+  .timeline::before { left: 20px; }
+  .timeline-row { grid-template-columns: 40px 1fr; }
+  .timeline-center { grid-column: 1; grid-row: 1; }
+  .timeline-side--left, .timeline-side--right { grid-column: 2; grid-row: 1; padding-left: 20px; padding-right: 0; text-align: left; }
+  .timeline-side--left .timeline-card::after { display: none; }
+  .timeline-side--right .timeline-card::before { left: -20px; width: 20px; }
+  .timeline-side--left .timeline-bullets { text-align: left; }
+  .timeline-side--left .timeline-bullets li::after { display: none; }
+  .timeline-side--left .timeline-bullets li::before { display: inline; }
 }

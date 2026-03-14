@@ -1,14 +1,8 @@
 /* =============================================
-   HERO.CSS — Homepage hero section styles
-   Only needed on index.html
+   HERO.CSS — Hero section styles
 ============================================= */
 
 #hero { position: relative; height: 100vh; padding-top: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 10; }
-
-
-/* Side text (anchored to hero, not fixed) */
-.side-left { display: none; }
-.side-right { display: none; }
 
 /* Top ornament */
 .ornament-top { display: flex; align-items: center; gap: 16px; margin-bottom: 48px; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 0.3s; }
@@ -32,15 +26,8 @@
 /* Tagline */
 .tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(14px, 1.6vw, 20px); font-weight: 300; font-style: italic; color: rgba(220,190,140,0.45); letter-spacing: 0.15em; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 1.2s; }
 
-/* Location pill */
+/* Location */
 .breathing-style { margin-top: 48px; display: flex; align-items: center; gap: 20px; opacity: 0; animation: fadeUp 1.2s ease forwards; animation-delay: 1.5s; }
 .bs-line { width: 40px; height: 1px; background: rgba(200,140,40,0.2); }
 .bs-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.65); text-transform: uppercase; }
 .bs-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(200,140,40,0.3); }
-
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .side-left, .side-right { display: none; }
-}
