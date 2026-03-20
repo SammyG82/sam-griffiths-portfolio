@@ -42,7 +42,7 @@ export default function HomePage() {
       {/* EXPERIENCES */}
       <section id="experiences">
         <div className="section">
-          <SectionHeader num="01" title="Experiences" jpSubtitle="経験" />
+          <SectionHeader num="01" title="Experience" jpSubtitle="経験" />
           <div className="reveal" style={{ paddingBottom: '48px' }}>
             <ExperienceCarousel />
           </div>
@@ -76,6 +76,10 @@ export default function HomePage() {
                 systems that not only look great but extract meaningful insight from real-world data. From ETL pipelines
                 and machine learning models to full-stack production web apps, I love working across the stack and
                 shipping things that actually get used.
+              </p>
+              <p>
+                At <span>DS3 (Data Science Student Society)</span>, I serve as a Full Stack Engineer on the software
+                team — building and maintaining production web applications used by the club and its events.
               </p>
               <p>
                 Outside of academics, I love keeping up with sports — mainly{' '}

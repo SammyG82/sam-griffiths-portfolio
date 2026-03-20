@@ -9,7 +9,7 @@ export default function NavBar() {
       <Link to="/" className="nav-logo">Home</Link>
       <div className="nav-links">
         <Link to="/experience" className={`nav-pill${location.pathname === '/experience' ? ' active' : ''}`}>
-          Experiences
+          Experience
         </Link>
         {isHome ? (
           <a href="#projects" className="nav-pill">Projects</a>

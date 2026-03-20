@@ -42,7 +42,7 @@ export default function ExperiencePage() {
   return (
     <div style={{ paddingTop: '60px', position: 'relative', zIndex: 10, minHeight: '100vh' }}>
       <div className="section">
-        <SectionHeader num="05" title="Experience" jpSubtitle="経験" minimal />
+        <SectionHeader num="01" title="Experience" jpSubtitle="経験" minimal />
         <div className="timeline">
           {experiences.map((exp, i) => {
             const isLeft = i % 2 === 0
