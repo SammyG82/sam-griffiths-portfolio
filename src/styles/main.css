@@ -64,6 +64,13 @@ body { width: 100vw; overflow-x: hidden; background: #160d06; font-family: 'Cinz
 .nav-pill:hover { border-color: rgba(200,140,40,0.4); color: rgba(200,140,40,0.9); background: rgba(200,140,40,0.05); }
 .nav-pill.active { border-color: rgba(200,140,40,0.45); color: rgba(200,140,40,0.9); background: rgba(200,140,40,0.06); }
 
+/* ---- HAMBURGER ---- */
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 21; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: rgba(200,140,40,0.7); transition: all 0.3s ease; }
+.nav-hamburger--open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+.nav-hamburger--open span:nth-child(2) { opacity: 0; }
+.nav-hamburger--open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+
 /* ---- FOOTER ---- */
 .site-footer { position: relative; z-index: 10; border-top: 1px solid rgba(200,140,40,0.3); padding: 40px 80px; display: flex; align-items: center; justify-content: space-between; }
 .footer-left { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.6); text-transform: uppercase; }
@@ -88,8 +95,39 @@ body { width: 100vw; overflow-x: hidden; background: #160d06; font-family: 'Cinz
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 768px) {
-  .section { padding: 80px 28px; }
-  .top-nav { padding: 0 24px; }
-  .nav-pill { padding: 7px 10px; font-size: 9px; }
-  .site-footer { padding: 40px 28px; }
+  .section { padding: 80px 24px; }
+  .top-nav { padding: 0 20px; }
+  .site-footer { padding: 32px 24px; }
+
+  /* Mobile nav — hamburger replaces pill row */
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(16,9,4,0.97);
+    border-bottom: 1px solid rgba(200,140,40,0.2);
+    backdrop-filter: blur(8px);
+    padding: 8px 0;
+    gap: 0;
+  }
+  .nav-links--open { display: flex; }
+  .nav-pill {
+    padding: 14px 24px;
+    font-size: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(200,140,40,0.07);
+    width: 100%;
+    letter-spacing: 0.25em;
+  }
+  .nav-pill:last-child { border-bottom: none; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 64px 18px; }
+  .site-footer { padding: 28px 18px; }
+  .footer-left { font-size: 8px; letter-spacing: 0.25em; }
 }

@@ -14,7 +14,7 @@
 /* Name */
 .main-name { opacity: 0; animation: fadeUp 1.4s ease forwards; animation-delay: 0.6s; position: relative; }
 .name-first { font-family: 'Cinzel', serif; font-size: clamp(18px, 2.5vw, 32px); font-weight: 400; color: rgba(220,190,140,0.6); letter-spacing: 0.6em; padding-left: 0.6em; text-transform: uppercase; display: block; margin-bottom: 4px; }
-.name-last { font-family: 'Cinzel', serif; font-size: clamp(64px, 9vw, 130px); font-weight: 900; color: #f0d8a8; letter-spacing: 0.08em; text-transform: uppercase; display: block; line-height: 0.9; text-shadow: 0 0 60px rgba(200,100,20,0.3), 0 0 120px rgba(160,60,10,0.15); }
+.name-last { font-family: 'Cinzel', serif; font-size: clamp(36px, 11vw, 130px); font-weight: 900; color: #f0d8a8; letter-spacing: 0.08em; text-transform: uppercase; display: block; line-height: 0.9; text-shadow: 0 0 60px rgba(200,100,20,0.3), 0 0 120px rgba(160,60,10,0.15); }
 .jp-sub { font-family: 'Noto Serif JP', serif; font-size: clamp(11px, 1.2vw, 15px); color: rgba(200,140,40,0.55); letter-spacing: 0.3em; display: block; margin-top: 12px; }
 
 /* Divider */
@@ -31,3 +31,24 @@
 .bs-line { width: 40px; height: 1px; background: rgba(200,140,40,0.2); }
 .bs-text { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.65); text-transform: uppercase; }
 .bs-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(200,140,40,0.3); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .ornament-top { gap: 10px; margin-bottom: 32px; }
+  .orn-line { width: 40px; }
+  .orn-text { letter-spacing: 0.25em; padding-left: 0.25em; font-size: 9px; }
+  .name-first { letter-spacing: 0.3em; padding-left: 0.3em; }
+  .jp-sub { letter-spacing: 0.2em; }
+  .divider { margin: 24px 0; }
+  .div-line { width: 60px; }
+  .tagline { letter-spacing: 0.08em; padding: 0 16px; }
+  .breathing-style { margin-top: 32px; gap: 12px; }
+  .bs-line { width: 24px; }
+  .bs-text { letter-spacing: 0.25em; }
+}
+
+@media (max-width: 480px) {
+  .ornament-top { display: none; }
+  .breathing-style { gap: 8px; }
+  .tagline { padding: 0 8px; }
+}

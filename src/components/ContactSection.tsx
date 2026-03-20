@@ -73,7 +73,7 @@ export default function ContactSection({ sectionNum = '04', showSep = false, min
             <span className="social-label">LinkedIn</span>
             <span className="social-sub">sam-b-griffiths</span>
           </a>
-          <a href="https://drive.google.com/file/d/1zZn3F1_POlVNxyEZJiMzVzOy7O4lHa3B/view" target="_blank" rel="noreferrer" className="social-link">
+          <a href="https://drive.google.com/file/d/1s3TrZH9KIne_WJE3eTMTVvqkKYYQfsjd/view" target="_blank" rel="noreferrer" className="social-link">
             <span className="social-icon">↓</span>
             <span className="social-label">Resume</span>
             <span className="social-sub">View PDF</span>
