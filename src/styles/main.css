@@ -94,6 +94,12 @@ body { width: 100vw; overflow-x: hidden; background: #160d06; font-family: 'Cinz
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .section { padding: 80px 48px; }
+  .top-nav { padding: 0 32px; }
+  .site-footer { padding: 40px 48px; }
+}
+
 @media (max-width: 768px) {
   .section { padding: 80px 24px; }
   .top-nav { padding: 0 20px; }

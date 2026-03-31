@@ -94,6 +94,12 @@
 .timeline-toggle { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.35em; color: rgba(200,140,40,0.4); text-transform: uppercase; margin-top: 12px; }
 
 /* ---- RESPONSIVE ---- */
+@media (max-width: 1024px) {
+  .about-grid { gap: 48px; }
+  .contact-grid { gap: 48px; }
+  .carousel-card { padding: 32px 36px; }
+}
+
 @media (max-width: 768px) {
   /* Carousel */
   .carousel { gap: 10px; }
