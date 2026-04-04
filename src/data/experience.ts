@@ -9,11 +9,11 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Software Engineer',
+    title: 'Full-Stack Engineer',
     company: 'Data Science Student Society (DS3)',
     period: 'Oct 2025 - Present',
     bullets: [
-      'Build and maintain the DS3 club website for 750+ members using React, Tailwind CSS, and Git.',
+      'Build and maintain the DS3 club website for 1000+ members using React, Tailwind CSS, and Supabase.',
       'Develop websites and conference pages for partner UCSD clubs, handling UI design, responsive layout, and deployment.',
       'Lead client meetings to gather requirements and deliver sites aligned with each club\'s design and goals.',
     ],

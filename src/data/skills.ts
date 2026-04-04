@@ -10,7 +10,7 @@ export const skills: SkillGroup[] = [
   },
   {
     group: 'Frameworks & Libraries',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'Streamlit', 'PyTorch', 'TensorFlow', 'Pandas', 'NumPy'],
+    items: ['React', 'Next.js', 'Tailwind CSS', 'Supabase', 'Streamlit', 'PyTorch', 'TensorFlow', 'Pandas', 'NumPy'],
   },
   {
     group: 'Developer Tools',

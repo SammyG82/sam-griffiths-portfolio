@@ -29,7 +29,7 @@ export default function HomePage() {
           <div className="div-kanji">創 · 構 · 式</div>
           <div className="div-line r"></div>
         </div>
-        <div className="tagline">Full Stack Developer &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; UC San Diego</div>
+        <div className="tagline">Full-Stack Engineer &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp; UC San Diego</div>
         <div className="breathing-style">
           <div className="bs-line"></div>
           <div className="bs-dot"></div>
@@ -78,7 +78,7 @@ export default function HomePage() {
                 shipping things that actually get used.
               </p>
               <p>
-                At <span>DS3 (Data Science Student Society)</span>, I serve as a Full Stack Engineer on the software
+                At <span>DS3 (Data Science Student Society)</span>, I serve as a Full-Stack Engineer on the software
                 team — building and maintaining production web applications used by the club and its events.
               </p>
               <p>
@@ -97,12 +97,12 @@ export default function HomePage() {
               </div>
               <div className="detail-block">
                 <div className="detail-label">GPA</div>
-                <div className="detail-value">3.9 / 4.0</div>
+                <div className="detail-value">3.97 / 4.0</div>
               </div>
               <div className="detail-block">
                 <div className="detail-label">Current Role</div>
                 <div className="detail-value">
-                  Full Stack Engineer
+                  Full-Stack Engineer
                   <br />
                   Data Science Student Society (DS3)
                 </div>
@@ -113,7 +113,7 @@ export default function HomePage() {
               </div>
               <div className="detail-block">
                 <div className="detail-label">Relevant Coursework</div>
-                <div className="detail-value">DSC 10 · Math 20B</div>
+                <div className="detail-value">DSC 20 · DSC 10 · Math 20C · Math 20B</div>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function AboutPage() {
               shipping things that actually get used.
             </p>
             <p>
-              At <span>DS3 (Data Science Student Society)</span>, I serve as a Full Stack Engineer on the software
+              At <span>DS3 (Data Science Student Society)</span>, I serve as a Full-Stack Engineer on the software
               team — building and maintaining production web applications used by the club and its events.
             </p>
             <p>
@@ -46,12 +46,12 @@ export default function AboutPage() {
             </div>
             <div className="detail-block">
               <div className="detail-label">GPA</div>
-              <div className="detail-value">3.9 / 4.0</div>
+              <div className="detail-value">3.97 / 4.0</div>
             </div>
             <div className="detail-block">
               <div className="detail-label">Current Role</div>
               <div className="detail-value">
-                Full Stack Engineer<br />
+                Full-Stack Engineer<br />
                 Data Science Student Society (DS3)
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
             </div>
             <div className="detail-block">
               <div className="detail-label">Relevant Coursework</div>
-              <div className="detail-value">DSC 10 · Math 20B</div>
+              <div className="detail-value">DSC 20 · DSC 10 · Math 20C · Math 20B</div>
             </div>
           </div>
         </div>
