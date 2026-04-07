@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { experiences } from '../data/experience'
+import { experiences } from '../../data/experience'
 
 export default function ExperienceCarousel() {
   const [index, setIndex] = useState(0)

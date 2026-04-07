@@ -3,11 +3,10 @@ import SectionHeader from './SectionHeader'
 
 interface ContactSectionProps {
   sectionNum?: string
-  showSep?: boolean
   minimal?: boolean
 }
 
-export default function ContactSection({ sectionNum = '04', showSep = false, minimal = false }: ContactSectionProps) {
+export default function ContactSection({ sectionNum = '04', minimal = false }: ContactSectionProps) {
   const firstRef = useRef<HTMLInputElement>(null)
   const lastRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
@@ -29,7 +28,6 @@ export default function ContactSection({ sectionNum = '04', showSep = false, min
 
   return (
     <div className="section">
-      {showSep && <><div className="section-sep reveal"></div><br /><br /></>}
       <SectionHeader num={sectionNum} title="Contact" jpSubtitle="連絡先" minimal={minimal} />
       <div className="contact-grid">
         <div className="contact-form reveal">
