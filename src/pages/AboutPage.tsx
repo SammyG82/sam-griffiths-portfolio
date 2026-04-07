@@ -19,8 +19,9 @@ export default function AboutPage() {
 
         {/* Skills */}
         <div className="section-sep reveal" style={{ marginTop: '80px' }}></div>
-        <br /><br />
-        <SectionHeader num="03" title="Skills" jpSubtitle="技術スタック" minimal />
+        <div style={{ marginTop: '48px' }}>
+          <SectionHeader num="03" title="Skills" jpSubtitle="技術スタック" minimal />
+        </div>
         <div className="skills-grid">
           {skills.map((group) => (
             <div key={group.group} className="skill-group reveal">
