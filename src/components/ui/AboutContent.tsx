@@ -33,7 +33,7 @@ export default function AboutContent() {
         </div>
         <div className="detail-block">
           <div className="detail-label">GPA</div>
-          <div className="detail-value">3.97 / 4.0</div>
+          <div className="detail-value">3.96 / 4.0</div>
         </div>
         <div className="detail-block">
           <div className="detail-label">Current Role</div>
