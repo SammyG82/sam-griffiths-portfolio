@@ -4,7 +4,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinzel', serif; }
 
 /* ---- ATMOSPHERE ---- */
@@ -51,7 +51,7 @@ body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinz
 .rip:nth-child(3) { animation-duration: 4s; animation-delay: 2.6s; }
 
 /* ---- CORNER MARKS ---- */
-.corner { position: fixed; z-index: 11; width: 28px; height: 28px; opacity: 0.25; animation: fadeIn 2s ease forwards; animation-delay: 2s; }
+.corner { position: fixed; z-index: 11; width: 28px; height: 28px; opacity: 0.25; animation: fadeIn 2s ease both; animation-delay: 2s; }
 .corner.tl { top: 24px; left: 24px; border-top: 1px solid rgba(200,140,40,0.6); border-left: 1px solid rgba(200,140,40,0.6); }
 .corner.tr { top: 24px; right: 24px; border-top: 1px solid rgba(200,140,40,0.6); border-right: 1px solid rgba(200,140,40,0.6); }
 
@@ -145,4 +145,10 @@ body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinz
   .section { padding: 64px 18px; }
   .site-footer { padding: 28px 18px; }
   .footer-left { font-size: 8px; letter-spacing: 0.25em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petal, .ember, .rip { animation: none; opacity: 0; }
+  .corner { animation: none; opacity: 0.25; }
+  .reveal { opacity: 1; transform: none; transition: none; }
 }

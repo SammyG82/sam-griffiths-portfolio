@@ -36,9 +36,9 @@ export default function AboutPage() {
         </div>
 
         {/* Footer nav */}
-        <div className="reveal" style={{ marginTop: '80px', borderTop: '1px solid rgba(200,140,40,0.1)', paddingTop: '60px', display: 'flex', gap: '16px', justifyContent: 'center' }}>
+        <div className="about-footer-nav reveal">
           <Link to="/projects" className="btn-link">View Projects →</Link>
-          <Link to="/#contact" className="btn-link--dim">Contact →</Link>
+          <Link to="/contact" className="btn-link--dim">Contact →</Link>
         </div>
 
       </div>

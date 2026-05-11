@@ -52,3 +52,9 @@
   .breathing-style { gap: 8px; }
   .tagline { padding: 0 8px; }
 }
+
+#hero { height: 100dvh; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ornament-top, .main-name, .divider, .tagline, .breathing-style { animation: none; opacity: 1; }
+}

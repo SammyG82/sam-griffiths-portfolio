@@ -1,21 +1,34 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function NavBar() {
   const location = useLocation()
   const isHome = location.pathname === '/'
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef<HTMLElement>(null)
 
   function closeMenu() { setMenuOpen(false) }
 
+  useEffect(() => {
+    if (!menuOpen) return
+    function handleClickOutside(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [menuOpen])
+
   return (
-    <nav className="top-nav">
+    <nav className="top-nav" ref={navRef}>
       <Link to="/" className="nav-logo" onClick={closeMenu}>Home</Link>
 
       <button
         className={`nav-hamburger${menuOpen ? ' nav-hamburger--open' : ''}`}
         onClick={() => setMenuOpen(o => !o)}
         aria-label="Toggle menu"
+        aria-expanded={menuOpen}
       >
         <span /><span /><span />
       </button>

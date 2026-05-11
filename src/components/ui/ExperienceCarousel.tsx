@@ -58,7 +58,7 @@ export default function ExperienceCarousel() {
           <button
             key={i}
             className={`carousel-dot${i === index ? ' carousel-dot--active' : ''}`}
-            onClick={() => { setIndex(i); setDirection(null) }}
+            onClick={() => { if (!animating) { setIndex(i); setDirection(null) } }}
             aria-label={`Go to experience ${i + 1}`}
           />
         ))}

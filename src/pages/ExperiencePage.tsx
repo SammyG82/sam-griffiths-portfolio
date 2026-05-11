@@ -13,7 +13,13 @@ function TimelineCard({
   onToggle: () => void
 }) {
   return (
-    <div className={`timeline-card${isOpen ? ' timeline-card--open' : ''}`} onClick={onToggle}>
+    <div
+      className={`timeline-card${isOpen ? ' timeline-card--open' : ''}`}
+      onClick={onToggle}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle() } }}
+    >
       <div className="timeline-title">{exp.title}</div>
       <div className="timeline-company">{exp.company}</div>
       <div className="timeline-period">{exp.period}</div>

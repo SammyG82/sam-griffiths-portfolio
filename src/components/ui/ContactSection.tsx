@@ -1,4 +1,5 @@
 import { useRef } from 'react'
+import { FaGithub } from 'react-icons/fa'
 import SectionHeader from './SectionHeader'
 
 interface ContactSectionProps {
@@ -21,8 +22,9 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
       alert('Please fill in your first name, email, and message.')
       return
     }
-    const subject = encodeURIComponent('Portfolio Contact from ' + first + ' ' + last)
-    const body = encodeURIComponent('From: ' + first + ' ' + last + '\nEmail: ' + email + '\n\n' + message)
+    const name = [first, last].filter(Boolean).join(' ')
+    const subject = encodeURIComponent('Portfolio Contact from ' + name)
+    const body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)
     window.location.href = 'mailto:sgriffiths@ucsd.edu?subject=' + subject + '&body=' + body
   }
 
@@ -34,21 +36,21 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
           <h3>Let's Connect</h3>
           <div className="form-row">
             <div className="form-field">
-              <label>First Name</label>
-              <input type="text" placeholder="First" ref={firstRef} />
+              <label htmlFor="contact-first">First Name</label>
+              <input id="contact-first" type="text" placeholder="First" ref={firstRef} />
             </div>
             <div className="form-field">
-              <label>Last Name</label>
-              <input type="text" placeholder="Last" ref={lastRef} />
+              <label htmlFor="contact-last">Last Name</label>
+              <input id="contact-last" type="text" placeholder="Last" ref={lastRef} />
             </div>
           </div>
           <div className="form-field">
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com" ref={emailRef} />
+            <label htmlFor="contact-email">Email</label>
+            <input id="contact-email" type="email" placeholder="your@email.com" ref={emailRef} />
           </div>
           <div className="form-field">
-            <label>Message</label>
-            <textarea rows={5} placeholder="What's on your mind?" ref={messageRef}></textarea>
+            <label htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" rows={5} placeholder="What's on your mind?" ref={messageRef}></textarea>
           </div>
           <button className="form-submit" onClick={handleSubmit}>
             Send Message →
@@ -62,7 +64,7 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
             <span className="social-sub">sgriffiths@ucsd.edu</span>
           </a>
           <a href="https://github.com/SammyG82" target="_blank" rel="noreferrer" className="social-link">
-            <span className="social-icon">⌥</span>
+            <span className="social-icon"><FaGithub /></span>
             <span className="social-label">GitHub</span>
             <span className="social-sub">SammyG82</span>
           </a>

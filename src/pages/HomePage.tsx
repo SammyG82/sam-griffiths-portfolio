@@ -43,7 +43,7 @@ export default function HomePage() {
       {/* EXPERIENCES */}
       <section id="experiences">
         <div className="section">
-          <SectionHeader num="01" title="Experience" jpSubtitle="経験" />
+          <SectionHeader num="01" title="Experience" jpSubtitle="経験" minimal />
           <div className="reveal" style={{ paddingBottom: '48px' }}>
             <ExperienceCarousel />
           </div>
@@ -53,7 +53,7 @@ export default function HomePage() {
       {/* PROJECTS */}
       <section id="projects">
         <div className="section">
-          <SectionHeader num="02" title="Projects" jpSubtitle="プロジェクト" />
+          <SectionHeader num="02" title="Projects" jpSubtitle="プロジェクト" minimal />
           <div className="projects-grid">
             {projects.filter((p) => p.featured).map((project) => (
               <ProjectCard key={project.id} project={project} />
@@ -65,14 +65,14 @@ export default function HomePage() {
       {/* ABOUT */}
       <section id="about">
         <div className="section">
-          <SectionHeader num="03" title="About" jpSubtitle="自己紹介" />
+          <SectionHeader num="03" title="About" jpSubtitle="自己紹介" minimal />
           <AboutContent />
         </div>
       </section>
 
       {/* CONTACT */}
       <section id="contact">
-        <ContactSection sectionNum="04" />
+        <ContactSection sectionNum="04" minimal />
       </section>
     </>
   )

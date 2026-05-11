@@ -1,6 +1,6 @@
 export default function Atmosphere() {
   return (
-    <>
+    <div aria-hidden="true">
       <div className="atmo"></div>
       <div className="grain"></div>
       <div className="vignette"></div>
@@ -35,6 +35,6 @@ export default function Atmosphere() {
       </div>
       <div className="corner tl"></div>
       <div className="corner tr"></div>
-    </>
+    </div>
   )
 }

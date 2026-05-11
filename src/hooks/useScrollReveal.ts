@@ -5,9 +5,10 @@ export function useScrollReveal() {
     const reveals = document.querySelectorAll('.reveal')
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, i) => {
+        let count = 0
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('visible'), i * 80)
+            setTimeout(() => entry.target.classList.add('visible'), count++ * 80)
           }
         })
       },
