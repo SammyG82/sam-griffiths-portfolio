@@ -1,6 +1,6 @@
 # Welcome to my portfolio!
 
-Hey, I'm Sam — a first-year Probability & Statistics student at UC San Diego, full stack engineer at DS3, and someone who loves building things that actually get used.
+Hey, I'm Sam — a first-year Mathematics-Computer Science student (minor in Data Science) at UC San Diego, full stack engineer at DS3, and someone who loves building things that actually get used.
 
 This is the source code behind my personal portfolio site. It's got a dark cinematic theme, smooth animations, and a growing collection of projects I'm proud of. Built with React, Vite, and TypeScript — deployed on GitHub Pages.
 

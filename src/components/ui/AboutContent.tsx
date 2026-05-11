@@ -3,8 +3,8 @@ export default function AboutContent() {
     <div className="about-grid">
       <div className="about-text reveal">
         <p>
-          Hello! My name is <span>Sam Griffiths</span> and I'm a first-year Probability and Statistics student at
-          the <span>University of California, San Diego</span>.
+          Hello! My name is <span>Sam Griffiths</span> and I'm a first-year Mathematics-Computer Science student
+          with a minor in Data Science at the <span>University of California, San Diego</span>.
         </p>
         <p>
           I'm passionate about the intersection of <span>data science and software engineering</span> — building
@@ -26,7 +26,9 @@ export default function AboutContent() {
         <div className="detail-block">
           <div className="detail-label">Education</div>
           <div className="detail-value">
-            B.S. Probability &amp; Statistics
+            B.S. Mathematics-Computer Science
+            <br />
+            Minor in Data Science
             <br />
             UC San Diego · Class of 2029
           </div>
