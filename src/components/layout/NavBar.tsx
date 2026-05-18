@@ -6,6 +6,8 @@ export default function NavBar() {
   const isHome = location.pathname === '/'
   const [menuOpen, setMenuOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const firstLinkRef = useRef<HTMLAnchorElement>(null)
 
   function closeMenu() { setMenuOpen(false) }
 
@@ -16,8 +18,22 @@ export default function NavBar() {
         setMenuOpen(false)
       }
     }
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        setMenuOpen(false)
+        hamburgerRef.current?.focus()
+      }
+    }
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [menuOpen])
+
+  useEffect(() => {
+    if (menuOpen) firstLinkRef.current?.focus()
   }, [menuOpen])
 
   return (
@@ -25,6 +41,7 @@ export default function NavBar() {
       <Link to="/" className="nav-logo" onClick={closeMenu}>Home</Link>
 
       <button
+        ref={hamburgerRef}
         className={`nav-hamburger${menuOpen ? ' nav-hamburger--open' : ''}`}
         onClick={() => setMenuOpen(o => !o)}
         aria-label="Toggle menu"
@@ -34,7 +51,7 @@ export default function NavBar() {
       </button>
 
       <div className={`nav-links${menuOpen ? ' nav-links--open' : ''}`}>
-        <Link to="/experience" className={`nav-pill${location.pathname === '/experience' ? ' active' : ''}`} onClick={closeMenu}>
+        <Link to="/experience" ref={firstLinkRef} className={`nav-pill${location.pathname === '/experience' ? ' active' : ''}`} onClick={closeMenu}>
           Experience
         </Link>
         {isHome ? (

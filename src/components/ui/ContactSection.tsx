@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, type FormEvent } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import SectionHeader from './SectionHeader'
 
@@ -13,7 +13,8 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
   const emailRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
 
-  function handleSubmit() {
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault()
     const first = firstRef.current?.value.trim() ?? ''
     const last = lastRef.current?.value.trim() ?? ''
     const email = emailRef.current?.value.trim() ?? ''
@@ -32,30 +33,30 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
     <div className="section">
       <SectionHeader num={sectionNum} title="Contact" jpSubtitle="連絡先" minimal={minimal} />
       <div className="contact-grid">
-        <div className="contact-form reveal">
+        <form className="contact-form reveal" onSubmit={handleSubmit}>
           <h3>Let's Connect</h3>
           <div className="form-row">
             <div className="form-field">
               <label htmlFor="contact-first">First Name</label>
-              <input id="contact-first" type="text" placeholder="First" ref={firstRef} />
+              <input id="contact-first" type="text" placeholder="First" ref={firstRef} autoComplete="given-name" />
             </div>
             <div className="form-field">
               <label htmlFor="contact-last">Last Name</label>
-              <input id="contact-last" type="text" placeholder="Last" ref={lastRef} />
+              <input id="contact-last" type="text" placeholder="Last" ref={lastRef} autoComplete="family-name" />
             </div>
           </div>
           <div className="form-field">
             <label htmlFor="contact-email">Email</label>
-            <input id="contact-email" type="email" placeholder="your@email.com" ref={emailRef} />
+            <input id="contact-email" type="email" placeholder="your@email.com" ref={emailRef} autoComplete="email" />
           </div>
           <div className="form-field">
             <label htmlFor="contact-message">Message</label>
             <textarea id="contact-message" rows={5} placeholder="What's on your mind?" ref={messageRef}></textarea>
           </div>
-          <button className="form-submit" onClick={handleSubmit}>
+          <button type="submit" className="form-submit">
             Send Message →
           </button>
-        </div>
+        </form>
         <div className="contact-socials reveal">
           <h3>Socials</h3>
           <a href="mailto:sgriffiths@ucsd.edu" className="social-link">

@@ -13,12 +13,10 @@ function TimelineCard({
   onToggle: () => void
 }) {
   return (
-    <div
+    <button
       className={`timeline-card${isOpen ? ' timeline-card--open' : ''}`}
       onClick={onToggle}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onToggle() } }}
+      aria-expanded={isOpen}
     >
       <div className="timeline-title">{exp.title}</div>
       <div className="timeline-company">{exp.company}</div>
@@ -29,7 +27,7 @@ function TimelineCard({
         </ul>
       </div>
       <div className="timeline-toggle">{isOpen ? '↑ collapse' : '↓ expand'}</div>
-    </div>
+    </button>
   )
 }
 

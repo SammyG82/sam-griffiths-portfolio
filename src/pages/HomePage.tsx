@@ -55,8 +55,8 @@ export default function HomePage() {
         <div className="section">
           <SectionHeader num="02" title="Projects" jpSubtitle="プロジェクト" minimal />
           <div className="projects-grid">
-            {projects.filter((p) => p.featured).map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projects.filter((p) => p.featured).map((project, i) => (
+              <ProjectCard key={project.id} project={project} num={String(i + 1).padStart(2, '0')} />
             ))}
           </div>
         </div>

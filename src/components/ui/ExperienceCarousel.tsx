@@ -21,6 +21,17 @@ export default function ExperienceCarousel() {
     }, 250)
   }
 
+  function navigateTo(target: number) {
+    if (animating || target === index) return
+    setDirection(target > index ? 'right' : 'left')
+    setAnimating(true)
+    setTimeout(() => {
+      setIndex(target)
+      setAnimating(false)
+      setDirection(null)
+    }, 250)
+  }
+
   const exp = experiences[index]
 
   return (
@@ -58,7 +69,7 @@ export default function ExperienceCarousel() {
           <button
             key={i}
             className={`carousel-dot${i === index ? ' carousel-dot--active' : ''}`}
-            onClick={() => { if (!animating) { setIndex(i); setDirection(null) } }}
+            onClick={() => navigateTo(i)}
             aria-label={`Go to experience ${i + 1}`}
           />
         ))}

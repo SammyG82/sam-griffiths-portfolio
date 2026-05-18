@@ -17,7 +17,7 @@
 .carousel-bullets li { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; color: rgba(220,190,140,0.90); line-height: 1.7; margin-bottom: 8px; }
 .carousel-bullets li::before { content: '—'; color: rgba(200,140,40,0.70); margin-right: 8px; }
 .carousel-dots { position: absolute; bottom: -32px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
-.carousel-dot { width: 6px; height: 6px; background: rgba(200,140,40,0.2); border: none; cursor: pointer; transform: rotate(45deg); transition: background 0.3s; padding: 0; }
+.carousel-dot { width: 6px; height: 6px; background: rgba(200,140,40,0.2); background-clip: content-box; border: none; cursor: pointer; transform: rotate(45deg); transition: background 0.3s; padding: 9px; margin: -9px; }
 .carousel-dot--active { background: rgba(200,140,40,0.7); }
 
 /* ---- PROJECTS ---- */
@@ -89,7 +89,7 @@
 .timeline-side { padding-top: 8px; }
 .timeline-side--left { padding-right: 28px; text-align: right; }
 .timeline-side--right { padding-left: 28px; }
-.timeline-card { border: 1px solid rgba(200,140,40,0.12); background: linear-gradient(135deg, rgba(200,140,40,0.03) 0%, transparent 60%); padding: 24px 28px; cursor: pointer; transition: all 0.3s ease; position: relative; }
+.timeline-card { border: 1px solid rgba(200,140,40,0.12); background: linear-gradient(135deg, rgba(200,140,40,0.03) 0%, transparent 60%); padding: 24px 28px; cursor: pointer; transition: all 0.3s ease; position: relative; width: 100%; text-align: inherit; font: inherit; color: inherit; }
 .timeline-card:hover { border-color: rgba(200,140,40,0.3); background: linear-gradient(135deg, rgba(200,140,40,0.06) 0%, transparent 60%); }
 .timeline-side--left .timeline-card::after { content: ''; position: absolute; top: 26px; right: -28px; width: 28px; height: 1px; background: rgba(200,140,40,0.25); }
 .timeline-side--right .timeline-card::before { content: ''; position: absolute; top: 26px; left: -28px; width: 28px; height: 1px; background: rgba(200,140,40,0.25); }
@@ -97,12 +97,20 @@
 .timeline-company { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; font-style: italic; color: rgba(200,140,40,0.95); margin-bottom: 4px; }
 .timeline-period { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.35em; color: rgba(200,140,40,0.70); text-transform: uppercase; margin-bottom: 0; }
 .timeline-dropdown { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.timeline-card--open .timeline-dropdown { max-height: 600px; }
+.timeline-card--open .timeline-dropdown { max-height: 300px; }
 .timeline-bullets { margin-top: 16px; padding-left: 0; list-style: none; border-top: 1px solid rgba(200,140,40,0.1); padding-top: 16px; }
 .timeline-side--left .timeline-bullets { text-align: left; }
 .timeline-bullets li { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; color: rgba(220,190,140,0.90); line-height: 1.7; margin-bottom: 8px; }
 .timeline-bullets li::before { content: '—'; color: rgba(200,140,40,0.70); margin-right: 8px; }
 .timeline-toggle { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.35em; color: rgba(200,140,40,0.70); text-transform: uppercase; margin-top: 12px; }
+
+/* ---- FOCUS VISIBLE ---- */
+.carousel-arrow:focus-visible,
+.card-link:focus-visible,
+.social-link:focus-visible,
+.form-submit:focus-visible,
+.timeline-card:focus-visible { outline: 2px solid rgba(200,140,40,0.7); outline-offset: 2px; }
+.carousel-dot:focus-visible { outline: 2px solid rgba(200,140,40,0.7); outline-offset: 2px; }
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1024px) {

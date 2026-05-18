@@ -5,7 +5,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
-body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinzel', serif; }
+body { width: 100%; overflow-x: hidden; background: #1c1008; font-family: 'Cinzel', serif; }
 
 /* ---- ATMOSPHERE ---- */
 .atmo { position: fixed; inset: 0; background: radial-gradient(ellipse at 50% 55%, rgba(210,110,15,0.22) 0%, transparent 50%), radial-gradient(ellipse at 50% 60%, rgba(180,80,10,0.48) 0%, transparent 72%), radial-gradient(ellipse at 30% 80%, rgba(140,50,5,0.32) 0%, transparent 60%), radial-gradient(ellipse at 70% 75%, rgba(200,100,15,0.28) 0%, transparent 56%), radial-gradient(ellipse at 50% 100%, rgba(140,58,7,0.55) 0%, transparent 62%), radial-gradient(ellipse at 50% 0%, rgba(20,15,10,0.35) 0%, transparent 50%), #1c1008; z-index: 0; }
@@ -57,8 +57,8 @@ body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinz
 
 /* ---- NAV ---- */
 .top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 60px; border-bottom: 1px solid rgba(200,140,40,0.3); background: linear-gradient(180deg, rgba(8,5,2,0.85) 0%, transparent 100%); backdrop-filter: blur(4px); }
-.nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 900; color: rgba(200,140,40,0.85); letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: color 0.3s; }
-.nav-logo:hover { color: rgba(200,140,40,0.9); }
+.nav-logo { font-family: 'Cinzel', serif; font-size: 14px; font-weight: 900; color: rgba(200,140,40,0.85); letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; padding: 7px 18px; border: 1px solid transparent; background: transparent; }
+.nav-logo:hover { color: rgba(200,140,40,0.9); border-color: rgba(200,140,40,0.4); background: rgba(200,140,40,0.05); }
 .nav-links { display: flex; gap: 4px; }
 .nav-pill { padding: 7px 18px; border: 1px solid transparent; background: transparent; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.3em; color: rgba(200,140,40,0.85); text-transform: uppercase; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; }
 .nav-pill:hover { border-color: rgba(200,140,40,0.4); color: rgba(200,140,40,0.9); background: rgba(200,140,40,0.05); }
@@ -146,6 +146,14 @@ body { width: 100vw; overflow-x: hidden; background: #1c1008; font-family: 'Cinz
   .site-footer { padding: 28px 18px; }
   .footer-left { font-size: 8px; letter-spacing: 0.25em; }
 }
+
+/* ---- FOCUS VISIBLE ---- */
+.nav-logo:focus-visible,
+.nav-pill:focus-visible,
+.nav-hamburger:focus-visible,
+.btn-link:focus-visible,
+.btn-link--dim:focus-visible,
+.footer-icon-link:focus-visible { outline: 2px solid rgba(200,140,40,0.7); outline-offset: 2px; }
 
 @media (prefers-reduced-motion: reduce) {
   .petal, .ember, .rip { animation: none; opacity: 0; }
