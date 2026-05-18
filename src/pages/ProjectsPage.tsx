@@ -15,7 +15,7 @@ export default function ProjectsPage() {
   return (
     <div className="page-wrapper">
       <div className="section">
-        <SectionHeader num="01" title="Projects" jpSubtitle="プロジェクト" minimal />
+        <SectionHeader num="01" title="Projects" jpSubtitle="プロジェクト" minimal headingLevel={1} />
 
         {years.map((year) => (
           <div key={year} className="projects-year-group">

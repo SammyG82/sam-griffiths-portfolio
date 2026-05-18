@@ -12,7 +12,7 @@ export default function AboutPage() {
       <div className="section">
 
         {/* Header */}
-        <SectionHeader num="02" title="About" jpSubtitle="自己紹介" minimal />
+        <SectionHeader num="01" title="About" jpSubtitle="自己紹介" minimal headingLevel={1} />
 
         {/* Bio + Details */}
         <AboutContent />
@@ -20,7 +20,7 @@ export default function AboutPage() {
         {/* Skills */}
         <div className="section-sep reveal" style={{ marginTop: '80px' }}></div>
         <div style={{ marginTop: '48px' }}>
-          <SectionHeader num="03" title="Skills" jpSubtitle="技術スタック" minimal />
+          <SectionHeader num="02" title="Skills" jpSubtitle="技術スタック" minimal />
         </div>
         <div className="skills-grid">
           {skills.map((group) => (

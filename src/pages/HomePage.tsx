@@ -20,11 +20,11 @@ export default function HomePage() {
           <div className="orn-diamond"></div>
           <div className="orn-line r"></div>
         </div>
-        <div className="main-name">
+        <h1 className="main-name">
           <span className="name-first">Sam</span>
           <span className="name-last">Griffiths</span>
           <span className="jp-sub">グリフィス · サム</span>
-        </div>
+        </h1>
         <div className="divider">
           <div className="div-line"></div>
           <div className="div-kanji">創 · 構 · 式</div>

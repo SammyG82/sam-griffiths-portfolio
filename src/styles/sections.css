@@ -41,7 +41,7 @@
 .about-text p span { color: rgba(200,140,40,0.8); font-style: italic; }
 .about-details { display: flex; flex-direction: column; gap: 28px; }
 .detail-block { border-left: 1px solid rgba(200,140,40,0.15); padding-left: 24px; }
-.detail-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.65); text-transform: uppercase; margin-bottom: 8px; }
+.detail-label { font-family: 'DM Mono', monospace; font-size: 9px; font-weight: 400; letter-spacing: 0.4em; color: rgba(200,140,40,0.65); text-transform: uppercase; margin-bottom: 8px; }
 .detail-value { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 300; color: rgba(220,190,140,0.92); line-height: 1.6; }
 
 .about-footer-nav { margin-top: 80px; border-top: 1px solid rgba(200,140,40,0.1); padding-top: 60px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
@@ -56,12 +56,12 @@
 /* ---- CONTACT ---- */
 .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
 .contact-form { display: flex; flex-direction: column; gap: 20px; }
-.contact-form h3, .contact-socials h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600; color: #f0d8a8; letter-spacing: 0.1em; margin-bottom: 8px; }
+.contact-form h2, .contact-form h3, .contact-socials h2, .contact-socials h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600; color: #f0d8a8; letter-spacing: 0.1em; margin-bottom: 8px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-field { display: flex; flex-direction: column; gap: 8px; }
 .form-field label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.4em; color: rgba(200,140,40,0.90); text-transform: uppercase; }
 .form-field input, .form-field textarea { background: rgba(200,140,40,0.03); border: 1px solid rgba(200,140,40,0.20); padding: 14px 16px; color: rgba(220,190,140,0.95); font-family: 'Cormorant Garamond', serif; font-size: 15px; outline: none; transition: all 0.3s; resize: none; }
-.form-field input:focus, .form-field textarea:focus { border-color: rgba(200,140,40,0.5); background: rgba(200,140,40,0.05); }
+.form-field input:focus-visible, .form-field textarea:focus-visible { border-color: rgba(200,140,40,0.5); background: rgba(200,140,40,0.05); outline: 2px solid rgba(200,140,40,0.7); outline-offset: 2px; }
 .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(200,140,40,0.60); }
 .form-submit { margin-top: 8px; padding: 16px 32px; border: 1px solid rgba(200,140,40,0.55); background: rgba(200,140,40,0.06); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.4em; color: rgba(200,140,40,0.90); text-transform: uppercase; cursor: pointer; transition: all 0.3s; align-self: flex-start; }
 .form-submit:hover { background: rgba(200,140,40,0.12); border-color: rgba(200,140,40,0.6); color: rgba(200,140,40,1); }
@@ -98,7 +98,7 @@
 .timeline-company { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; font-style: italic; color: rgba(200,140,40,0.95); margin-bottom: 4px; }
 .timeline-period { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.35em; color: rgba(200,140,40,0.70); text-transform: uppercase; margin-bottom: 0; }
 .timeline-dropdown { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-.timeline-card--open .timeline-dropdown { max-height: 300px; }
+.timeline-card--open .timeline-dropdown { max-height: 600px; }
 .timeline-bullets { margin-top: 16px; padding-left: 0; list-style: none; border-top: 1px solid rgba(200,140,40,0.1); padding-top: 16px; }
 .timeline-side--left .timeline-bullets { text-align: left; }
 .timeline-bullets li { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 300; color: rgba(220,190,140,0.90); line-height: 1.7; margin-bottom: 8px; }
@@ -151,6 +151,16 @@
 
   /* Skills */
   .skills-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-card { transition: none; }
+  .project-card { transition: none; }
+  .project-card:hover { transform: none; }
+  .project-card::before { transition: none; }
+  .social-link { transition: none; }
+  .social-link:hover { transform: none; }
+  .timeline-dropdown { transition: none; }
 }
 
 @media (max-width: 480px) {

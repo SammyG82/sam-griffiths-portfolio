@@ -42,7 +42,7 @@ export default function ExperiencePage() {
   return (
     <div className="page-wrapper">
       <div className="section">
-        <SectionHeader num="01" title="Experience" jpSubtitle="経験" minimal />
+        <SectionHeader num="01" title="Experience" jpSubtitle="経験" minimal headingLevel={1} />
         <div className="timeline">
           {experiences.map((exp, i) => {
             const isLeft = i % 2 === 0

@@ -1,17 +1,21 @@
 import { useRef, type FormEvent } from 'react'
+import { EMAIL } from '../../data/contact'
 import { FaGithub } from 'react-icons/fa'
 import SectionHeader from './SectionHeader'
 
 interface ContactSectionProps {
   sectionNum?: string
   minimal?: boolean
+  headingLevel?: 1 | 2
 }
 
-export default function ContactSection({ sectionNum = '04', minimal = false }: ContactSectionProps) {
+export default function ContactSection({ sectionNum = '04', minimal = false, headingLevel = 2 }: ContactSectionProps) {
   const firstRef = useRef<HTMLInputElement>(null)
   const lastRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
+
+  const SubHeading: 'h2' | 'h3' = headingLevel === 1 ? 'h2' : 'h3'
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -26,19 +30,19 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
     const name = [first, last].filter(Boolean).join(' ')
     const subject = encodeURIComponent('Portfolio Contact from ' + name)
     const body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)
-    window.location.href = 'mailto:sgriffiths@ucsd.edu?subject=' + subject + '&body=' + body
+    window.location.href = `mailto:${EMAIL}?subject=` + subject + '&body=' + body
   }
 
   return (
     <div className="section">
-      <SectionHeader num={sectionNum} title="Contact" jpSubtitle="連絡先" minimal={minimal} />
+      <SectionHeader num={sectionNum} title="Contact" jpSubtitle="連絡先" minimal={minimal} headingLevel={headingLevel} />
       <div className="contact-grid">
         <form className="contact-form reveal" onSubmit={handleSubmit}>
-          <h3>Let's Connect</h3>
+          <SubHeading>Let's Connect</SubHeading>
           <div className="form-row">
             <div className="form-field">
               <label htmlFor="contact-first">First Name</label>
-              <input id="contact-first" type="text" placeholder="First" ref={firstRef} autoComplete="given-name" />
+              <input id="contact-first" type="text" placeholder="First" ref={firstRef} autoComplete="given-name" required />
             </div>
             <div className="form-field">
               <label htmlFor="contact-last">Last Name</label>
@@ -47,22 +51,22 @@ export default function ContactSection({ sectionNum = '04', minimal = false }: C
           </div>
           <div className="form-field">
             <label htmlFor="contact-email">Email</label>
-            <input id="contact-email" type="email" placeholder="your@email.com" ref={emailRef} autoComplete="email" />
+            <input id="contact-email" type="email" placeholder="your@email.com" ref={emailRef} autoComplete="email" required />
           </div>
           <div className="form-field">
             <label htmlFor="contact-message">Message</label>
-            <textarea id="contact-message" rows={5} placeholder="What's on your mind?" ref={messageRef}></textarea>
+            <textarea id="contact-message" rows={5} placeholder="What's on your mind?" ref={messageRef} required></textarea>
           </div>
           <button type="submit" className="form-submit">
             Send Message →
           </button>
         </form>
         <div className="contact-socials reveal">
-          <h3>Socials</h3>
-          <a href="mailto:sgriffiths@ucsd.edu" className="social-link">
+          <SubHeading>Socials</SubHeading>
+          <a href={`mailto:${EMAIL}`} className="social-link">
             <span className="social-icon">✉</span>
             <span className="social-label">Email</span>
-            <span className="social-sub">sgriffiths@ucsd.edu</span>
+            <span className="social-sub">{EMAIL}</span>
           </a>
           <a href="https://github.com/SammyG82" target="_blank" rel="noreferrer" className="social-link">
             <span className="social-icon"><FaGithub /></span>

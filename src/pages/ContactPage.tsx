@@ -6,7 +6,7 @@ export default function ContactPage() {
 
   return (
     <div className="page-wrapper">
-      <ContactSection sectionNum="01" minimal />
+      <ContactSection sectionNum="01" minimal headingLevel={1} />
     </div>
   )
 }

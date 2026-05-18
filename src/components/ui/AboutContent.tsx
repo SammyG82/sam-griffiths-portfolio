@@ -22,38 +22,38 @@ export default function AboutContent() {
         </p>
       </div>
 
-      <div className="about-details reveal">
+      <dl className="about-details reveal">
         <div className="detail-block">
-          <div className="detail-label">Education</div>
-          <div className="detail-value">
+          <dt className="detail-label">Education</dt>
+          <dd className="detail-value">
             B.S. Mathematics-Computer Science
             <br />
             Minor in Data Science
             <br />
             UC San Diego · Class of 2029
-          </div>
+          </dd>
         </div>
         <div className="detail-block">
-          <div className="detail-label">GPA</div>
-          <div className="detail-value">3.96 / 4.0</div>
+          <dt className="detail-label">GPA</dt>
+          <dd className="detail-value">3.96 / 4.0</dd>
         </div>
         <div className="detail-block">
-          <div className="detail-label">Current Role</div>
-          <div className="detail-value">
+          <dt className="detail-label">Current Role</dt>
+          <dd className="detail-value">
             Full-Stack Engineer
             <br />
             Data Science Student Society (DS3)
-          </div>
+          </dd>
         </div>
         <div className="detail-block">
-          <div className="detail-label">Location</div>
-          <div className="detail-value">San Diego, CA</div>
+          <dt className="detail-label">Location</dt>
+          <dd className="detail-value">San Diego, CA</dd>
         </div>
         <div className="detail-block">
-          <div className="detail-label">Relevant Coursework</div>
-          <div className="detail-value">DSC 20 · DSC 10 · Math 20C · Math 20B</div>
+          <dt className="detail-label">Relevant Coursework</dt>
+          <dd className="detail-value">DSC 20 · DSC 10 · Math 20C · Math 20B</dd>
         </div>
-      </div>
+      </dl>
     </div>
   )
 }

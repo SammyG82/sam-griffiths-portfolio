@@ -1,35 +1,35 @@
 import { useState } from 'react'
 import { experiences } from '../../data/experience'
 
+const CAROUSEL_ANIM_MS = 250
+
 export default function ExperienceCarousel() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState<'left' | 'right' | null>(null)
   const [animating, setAnimating] = useState(false)
 
-  function navigate(dir: 'left' | 'right') {
+  function doNavigate(dir: 'left' | 'right', getNextIndex: (prev: number) => number) {
     if (animating) return
     setDirection(dir)
     setAnimating(true)
     setTimeout(() => {
-      setIndex((prev) =>
-        dir === 'right'
-          ? (prev + 1) % experiences.length
-          : (prev - 1 + experiences.length) % experiences.length
-      )
+      setIndex(getNextIndex)
       setAnimating(false)
       setDirection(null)
-    }, 250)
+    }, CAROUSEL_ANIM_MS)
+  }
+
+  function navigate(dir: 'left' | 'right') {
+    doNavigate(dir, (prev) =>
+      dir === 'right'
+        ? (prev + 1) % experiences.length
+        : (prev - 1 + experiences.length) % experiences.length
+    )
   }
 
   function navigateTo(target: number) {
-    if (animating || target === index) return
-    setDirection(target > index ? 'right' : 'left')
-    setAnimating(true)
-    setTimeout(() => {
-      setIndex(target)
-      setAnimating(false)
-      setDirection(null)
-    }, 250)
+    if (target === index) return
+    doNavigate(target > index ? 'right' : 'left', () => target)
   }
 
   const exp = experiences[index]
