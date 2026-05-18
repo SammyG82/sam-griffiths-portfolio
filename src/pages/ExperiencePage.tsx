@@ -33,14 +33,10 @@ function TimelineCard({
 
 export default function ExperiencePage() {
   useScrollReveal()
-  const [openIds, setOpenIds] = useState<Set<number>>(new Set())
+  const [openId, setOpenId] = useState<number | null>(null)
 
   function toggle(id: number) {
-    setOpenIds((prev) => {
-      const next = new Set(prev)
-      next.has(id) ? next.delete(id) : next.add(id)
-      return next
-    })
+    setOpenId(prev => prev === id ? null : id)
   }
 
   return (
@@ -50,7 +46,7 @@ export default function ExperiencePage() {
         <div className="timeline">
           {experiences.map((exp, i) => {
             const isLeft = i % 2 === 0
-            const isOpen = openIds.has(exp.id)
+            const isOpen = openId === exp.id
             return (
               <div key={exp.id} className="timeline-row reveal">
                 <div className="timeline-side timeline-side--left">

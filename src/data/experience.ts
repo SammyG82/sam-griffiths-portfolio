@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     bullets: [
       'Mentored 25+ students, promoting academic growth and serving as a positive role model.',
       'Led innovative, bi-monthly lessons designed to engage students and spark enthusiasm for learning.',
-      'Provided one-on-one support to struggling students, helping them improve classwork understanding and offering personalized feedback on assignments.',
+      'Provided one-on-one support to struggling students, offering personalized feedback to strengthen understanding.',
     ],
   },
   {
