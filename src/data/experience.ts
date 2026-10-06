@@ -9,6 +9,16 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
+    title: 'Workshops Director',
+    company: 'Data Science Student Society (DS3)',
+    period: 'Jun 2026 - Present',
+    bullets: [
+      'Lead a 3-person team that hosts 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance).',
+      'Run weekly beginner-friendly LeetCode sessions, guiding students from brute-force to optimal solutions.',
+    ],
+  },
+  {
+    id: 2,
     title: 'Full Stack Engineer Intern',
     company: 'Data Science Alliance (DSA)',
     period: 'Jun 2026 - Sep 2026',
@@ -19,7 +29,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Research Consultant',
     company: 'UCSD Center for Energy Research (CER)',
     period: 'Apr 2026 - Jun 2026',
@@ -30,18 +40,17 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
-    title: 'Full-Stack Engineer',
+    id: 4,
+    title: 'Full Stack Engineer',
     company: 'Data Science Student Society (DS3)',
-    period: 'Oct 2025 - Present',
+    period: 'Oct 2025 - Jun 2026',
     bullets: [
-      'Build and maintain the DS3 club website for 1000+ members using React, Tailwind CSS, and Supabase.',
-      'Develop websites and conference pages for partner UCSD clubs, handling UI design, responsive layout, and deployment.',
-      'Lead client meetings to gather requirements and deliver sites aligned with each club\'s design and goals.',
+      'Built and maintained the DS3 website for 1500+ members using React, Tailwind CSS, and Supabase.',
+      'Developed sites for partner UCSD clubs, leading client meetings and handling design and deployment.',
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Intern',
     company: 'High Temp Metals, Inc.',
     period: 'Jun 2025 - Sep 2025',
@@ -51,7 +60,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Teaching Assistant',
     company: 'Arroyo Vista Elementary School',
     period: 'Aug 2024 - Jun 2025',
@@ -62,7 +71,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Head Tutor',
     company: 'Veritas Tutoring',
     period: 'Sep 2023 - Jun 2025',
@@ -73,7 +82,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Group Leader',
     company: 'Badminton Club',
     period: 'Sep 2022 - Jun 2025',
@@ -83,7 +92,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: 'Thai/Laotian Ambassador',
     company: 'Cultural Foods Club',
     period: 'Sep 2022 - Jun 2025',
