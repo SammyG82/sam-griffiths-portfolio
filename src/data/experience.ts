@@ -9,6 +9,17 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
+    title: 'Full Stack Engineer Intern',
+    company: 'Data Science Alliance (DSA)',
+    period: 'Jun 2026 - Sep 2026',
+    bullets: [
+      'Developed a route-optimization tool for non-profit Feeding San Diego that helps dispatchers plan food-rescue pickup and delivery routes across multiple vehicles using Next.js, FastAPI, and Google OR-Tools.',
+      'Wrote an automated test suite for the tool with 90%+ coverage, using pytest, Vitest, and GitHub Actions CI.',
+      'Built multiple educational games with React and TypeScript and set up the Supabase backend for DSA\'s website.',
+    ],
+  },
+  {
+    id: 2,
     title: 'Research Consultant',
     company: 'UCSD Center for Energy Research (CER)',
     period: 'Apr 2026 - Jun 2026',
@@ -19,7 +30,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Full-Stack Engineer',
     company: 'Data Science Student Society (DS3)',
     period: 'Oct 2025 - Present',
@@ -30,7 +41,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Intern',
     company: 'High Temp Metals, Inc.',
     period: 'Jun 2025 - Sep 2025',
@@ -40,7 +51,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Teaching Assistant',
     company: 'Arroyo Vista Elementary School',
     period: 'Aug 2024 - Jun 2025',
@@ -51,7 +62,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Head Tutor',
     company: 'Veritas Tutoring',
     period: 'Sep 2023 - Jun 2025',
@@ -62,7 +73,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Group Leader',
     company: 'Badminton Club',
     period: 'Sep 2022 - Jun 2025',
@@ -72,7 +83,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: 'Thai/Laotian Ambassador',
     company: 'Cultural Foods Club',
     period: 'Sep 2022 - Jun 2025',
