@@ -9,6 +9,17 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
+    title: 'Research Consultant',
+    company: 'UCSD Center for Energy Research (CER)',
+    period: 'Apr 2026 - Jun 2026',
+    bullets: [
+      'Designed and built an interactive research dashboard analyzing EV adoption and oil dependency across 50+ countries, turning IEA-based forecasts and historical oil price data into 5 dynamic D3.js visualizations.',
+      'Developed and deployed the platform using Next.js, TypeScript, and Tailwind CSS, building a reusable component library with responsive layouts for mobile, tablet, and desktop.',
+      'Presented to CER faculty, communicating findings on how EV growth could reduce national oil imports.',
+    ],
+  },
+  {
+    id: 2,
     title: 'Full-Stack Engineer',
     company: 'Data Science Student Society (DS3)',
     period: 'Oct 2025 - Present',
@@ -19,7 +30,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Intern',
     company: 'High Temp Metals, Inc.',
     period: 'Jun 2025 - Sep 2025',
@@ -29,7 +40,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: 'Teaching Assistant',
     company: 'Arroyo Vista Elementary School',
     period: 'Aug 2024 - Jun 2025',
@@ -40,7 +51,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Head Tutor',
     company: 'Veritas Tutoring',
     period: 'Sep 2023 - Jun 2025',
@@ -51,7 +62,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: 'Group Leader',
     company: 'Badminton Club',
     period: 'Sep 2022 - Jun 2025',
@@ -61,7 +72,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: 'Thai/Laotian Ambassador',
     company: 'Cultural Foods Club',
     period: 'Sep 2022 - Jun 2025',
