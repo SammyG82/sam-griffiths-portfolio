@@ -51,9 +51,11 @@ export default function ExperienceCarousel() {
         <div className="carousel-title">{exp.title}</div>
         <div className="carousel-company">{exp.company}</div>
         <div className="carousel-period">{exp.period}</div>
-        <ul className="carousel-bullets">
-          {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
-        </ul>
+        {exp.bullets.length > 0 && (
+          <ul className="carousel-bullets">
+            {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
+          </ul>
+        )}
       </div>
 
       <button

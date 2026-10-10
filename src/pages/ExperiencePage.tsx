@@ -22,9 +22,11 @@ function TimelineCard({
       <div className="timeline-company">{exp.company}</div>
       <div className="timeline-period">{exp.period}</div>
       <div className="timeline-dropdown">
-        <ul className="timeline-bullets">
-          {exp.bullets.map((b, j) => <li key={j}>{b}</li>)}
-        </ul>
+        {exp.bullets.length > 0 && (
+          <ul className="timeline-bullets">
+            {exp.bullets.map((b, j) => <li key={j}>{b}</li>)}
+          </ul>
+        )}
       </div>
       <div className="timeline-toggle">{isOpen ? '↑ collapse' : '↓ expand'}</div>
     </button>
