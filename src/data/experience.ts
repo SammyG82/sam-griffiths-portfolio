@@ -9,22 +9,22 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Instructional Assistant',
-    company: 'Halıcıoğlu Data Science Institute, UC San Diego',
-    period: 'Jun 2026 - Present',
-    bullets: [
-      "Supported 500+ students in DSC 10, UCSD's largest Data Science lower-division course, through weekly discussion sections, office hours, and grading, teaching Python, pandas, and tabular data analysis.",
-      'Maintained and updated the official DSC 10 course website, writing course content, building labs and homework assignments, and improving site functionality.',
-    ],
-  },
-  {
-    id: 2,
     title: 'Workshops Director',
     company: 'Data Science Student Society (DS3)',
     period: 'Jun 2026 - Present',
     bullets: [
       'Lead a 3-person team that hosts 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance).',
       'Run weekly beginner-friendly LeetCode sessions, guiding students from brute-force to optimal solutions.',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Instructional Assistant',
+    company: 'Halıcıoğlu Data Science Institute, UC San Diego',
+    period: 'Jun 2026 - Present',
+    bullets: [
+      "Supported 500+ students in DSC 10, UCSD's largest Data Science lower-division course, through weekly discussion sections, office hours, and grading, teaching Python, pandas, and tabular data analysis.",
+      'Maintained and updated the official DSC 10 course website, writing course content, building labs and homework assignments, and improving site functionality.',
     ],
   },
   {
