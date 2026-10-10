@@ -12,7 +12,10 @@ export const experiences: Experience[] = [
     title: 'Instructional Assistant',
     company: 'Halıcıoğlu Data Science Institute, UC San Diego',
     period: 'Jun 2026 - Present',
-    bullets: [],
+    bullets: [
+      "Supported 500+ students in DSC 10, UCSD's largest Data Science lower-division course, through weekly discussion sections, office hours, and grading, teaching Python, pandas, and tabular data analysis.",
+      'Maintained and updated the official DSC 10 course website, writing course content, building labs and homework assignments, and improving site functionality.',
+    ],
   },
   {
     id: 2,
