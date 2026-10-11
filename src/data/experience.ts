@@ -13,8 +13,8 @@ export const experiences: Experience[] = [
     company: 'Data Science Student Society (DS3)',
     period: 'Jun 2026 - Present',
     bullets: [
-      'Lead a 3-person team that hosts 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance).',
-      'Run weekly beginner-friendly LeetCode sessions, guiding students from brute-force to optimal solutions.',
+      'Lead a 3-person team that hosts 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance), averaging 40 students per workshop.',
+      'Run weekly beginner-friendly LeetCode sessions averaging 25 students, from brute-force to optimal solutions.',
     ],
   },
   {
