@@ -9,12 +9,14 @@ export interface Experience {
 export const experiences: Experience[] = [
   {
     id: 1,
-    title: 'Workshops Director',
+    title: 'Workshops Director (prev. Full Stack Engineer)',
     company: 'Data Science Student Society (DS3)',
-    period: 'Jun 2026 - Present',
+    period: 'Oct 2025 - Present',
     bullets: [
-      'Lead a 3-person team that hosts 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance), averaging 40 students per workshop.',
-      'Run weekly beginner-friendly LeetCode sessions averaging 25 students, from brute-force to optimal solutions.',
+      'Lead a 3-person team hosting 3 workshops per quarter on industry tools (Docker, AWS, Databricks) and domains (sports, bioinformatics, finance), averaging 40 students.',
+      'Run weekly LeetCode sessions, averaging 20 students.',
+      'Built and maintained the DS3 website serving 1,500+ members using React, Tailwind CSS, and Supabase.',
+      'Developed websites for partner UCSD organizations including Student Entrepreneurs Network and Chiba Lab, leading client meetings and handling design and deployment.',
     ],
   },
   {
@@ -33,9 +35,10 @@ export const experiences: Experience[] = [
     company: 'Data Science Alliance (DSA)',
     period: 'Jun 2026 - Sep 2026',
     bullets: [
-      'Developed a route-optimization tool for non-profit Feeding San Diego that helps dispatchers plan food-rescue pickup and delivery routes across multiple vehicles using Next.js, FastAPI, and Google OR-Tools.',
-      'Wrote an automated test suite for the tool with 90%+ coverage, using pytest, Vitest, and GitHub Actions CI.',
-      'Built multiple educational games with React and TypeScript and set up the Supabase backend for DSA\'s website.',
+      'Built a route-optimization tool for non-profit Feeding San Diego to replace manual spreadsheet planning, using Google OR-Tools (capacitated VRP with time windows), FastAPI, and Next.js.',
+      'Implemented an async job API and cached Google Maps calls to avoid gateway timeouts and reduce API costs.',
+      'Set up a GitHub Actions CI pipeline and wrote 2,400+ tests (95% backend coverage) using pytest and Vitest.',
+      'Built educational games in React/TypeScript and the Supabase backend for DSA\'s website.',
     ],
   },
   {
@@ -44,23 +47,12 @@ export const experiences: Experience[] = [
     company: 'UCSD Center for Energy Research (CER)',
     period: 'Apr 2026 - Jun 2026',
     bullets: [
-      'Designed and built an interactive research dashboard analyzing EV adoption and oil dependency across 50+ countries, turning IEA-based forecasts and historical oil price data into 5 dynamic D3.js visualizations.',
-      'Developed and deployed the platform using Next.js, TypeScript, and Tailwind CSS, building a reusable component library with responsive layouts for mobile, tablet, and desktop.',
-      'Presented to CER faculty, communicating findings on how EV growth could reduce national oil imports.',
+      'Built an interactive dashboard analyzing EV adoption and oil dependency across 50+ countries, with 5 D3.js visualizations, using Next.js, TypeScript, and Tailwind CSS.',
+      'Presented findings to CER faculty on how EV growth could reduce national oil imports.',
     ],
   },
   {
     id: 5,
-    title: 'Full Stack Engineer',
-    company: 'Data Science Student Society (DS3)',
-    period: 'Oct 2025 - Jun 2026',
-    bullets: [
-      'Built and maintained the DS3 website for 1500+ members using React, Tailwind CSS, and Supabase.',
-      'Developed sites for partner UCSD clubs, leading client meetings and handling design and deployment.',
-    ],
-  },
-  {
-    id: 6,
     title: 'Intern',
     company: 'High Temp Metals, Inc.',
     period: 'Jun 2025 - Sep 2025',
@@ -70,7 +62,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     title: 'Teaching Assistant',
     company: 'Arroyo Vista Elementary School',
     period: 'Aug 2024 - Jun 2025',
@@ -81,7 +73,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 8,
+    id: 7,
     title: 'Head Tutor',
     company: 'Veritas Tutoring',
     period: 'Sep 2023 - Jun 2025',
@@ -92,7 +84,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     title: 'Group Leader',
     company: 'Badminton Club',
     period: 'Sep 2022 - Jun 2025',
@@ -102,7 +94,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    id: 10,
+    id: 9,
     title: 'Thai/Laotian Ambassador',
     company: 'Cultural Foods Club',
     period: 'Sep 2022 - Jun 2025',

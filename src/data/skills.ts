@@ -6,14 +6,18 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     group: 'Languages',
-    items: ['Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS'],
+    items: ['Python', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'Bash', 'HTML', 'CSS'],
   },
   {
     group: 'Frameworks & Libraries',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'FastAPI', 'Supabase', 'PyTorch', 'TensorFlow', 'Pandas', 'NumPy'],
+    items: ['React', 'Next.js', 'FastAPI', 'Supabase', 'PyTorch', 'Pandas', 'NumPy', 'Google OR-Tools', 'D3.js'],
   },
   {
     group: 'Developer Tools',
-    items: ['Git', 'GitHub', 'Vite', 'Bun', 'Stripe', 'Figma', 'VS Code', 'Jupyter Notebook', 'LaTeX', 'Excel'],
+    items: ['Git', 'Docker', 'GitHub Actions (CI/CD)', 'pytest', 'Vitest', 'Jupyter', 'Figma', 'LaTeX'],
+  },
+  {
+    group: 'Concepts',
+    items: ['Data Structures & Algorithms', 'OOP', 'REST APIs', 'Testing', 'Optimization', 'Machine Learning'],
   },
 ]
